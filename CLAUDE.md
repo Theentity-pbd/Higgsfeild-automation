@@ -18,7 +18,7 @@ Per `agents/claude-code-instructions.md`, always read in this order before gener
 2. `SYSTEM/operating-rules.md` — quality rules, automation logic, agent behaviour
 3. `CREATIVE-DIRECTION.md` — master brand identity (PBD London, full visual/voice/audience context)
 4. `brand-voice.md` — communication tone, writing rules, platform voice adaptation
-5. `Visual language md` — composition, typography, colour, garment, and cinematic rules
+5. `visual-language.md` — composition, typography, colour, garment, and cinematic rules
 6. Relevant workflow or prompt file (e.g. `workflows/video-pipeline.md`, `prompts/seedance-base-prompt.md`)
 
 ---
@@ -31,15 +31,19 @@ The system follows **one file = one responsibility**. Do not mix concerns across
 |------|---------|
 | `CREATIVE-DIRECTION.md` | Master brand identity — stable, rarely changes |
 | `brand-voice.md` | Communication style for all written outputs |
-| `Visual language md` | Visual composition and design rules |
+| `visual-language.md` | Visual composition and design rules |
 | `SYSTEM/operating-rules.md` | Operational intelligence, quality gates, agent rules |
-| `ARCHITECTURE.md` | Folder structure plan and system philosophy |
+| `SYSTEM/campaign-log.md` | Auto-updated log of all campaign outputs |
+| `SYSTEM/shopify-integration.md` | Shopify CLI connection details and authentication steps |
 | `agents/claude-code-instructions.md` | Claude's operating instructions within this repo |
 | `prompts/seedance-base-prompt.md` | Modular Seedance 2.0 video prompt with `{{VARIABLE}}` placeholders |
 | `prompts/caption-prompt.md` | Modular caption generation system with `{{VARIABLE}}` placeholders |
 | `workflows/video-pipeline.md` | 10-stage pipeline: Brief → Context Analysis → Variables → Prompt → Validate → Submit → Review → Select → Export → Log |
+| `brand/` | Typography, colour system, audience psychology |
+| `cinematics/` | Camera language, lighting, motion direction, editing style, shot composition |
+| `content/` | TikTok/Instagram frameworks, storytelling hooks, caption structures, emotional triggers |
 
-**Planned but not yet created:** `/commerce`, `/strategy` sub-directories per `ARCHITECTURE.md`.
+**Planned but not yet created:** `/commerce`, `/strategy`.
 
 ---
 

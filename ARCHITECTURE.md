@@ -1,115 +1,35 @@
-Repository Architecture & Context Structure
-The PBD London repository is designed as a modular intelligence system, not a single large context file.
-The master context file acts as:
-	•	the core identity
-	•	mission overview
-	•	behavioural foundation
-	•	high-level creative direction
-It should remain stable and focused.
-Detailed knowledge will be separated into specialised sub-files to improve:
-	•	retrieval quality
-	•	creative consistency
-	•	automation scalability
-	•	agent specialisation
-	•	long-term maintainability
-The system follows a modular structure where each file has a specific responsibility.
+# Architecture
 
-CONTEXT STRUCTURE PRINCIPLE
+This repository is a modular brand automation system for PBD London. Each folder has a single responsibility.
+
+## Folder Map
+
+| Folder | Purpose |
+|--------|---------|
+| `brand/` | Core brand identity — typography, colour system, audience psychology |
+| `cinematics/` | Visual direction — camera language, lighting, motion, editing, shot composition |
+| `content/` | Content frameworks — TikTok, Instagram, captions, hooks, emotional triggers |
+| `commerce/` | Commerce systems — product launch, Shopify, conversion (planned) |
+| `strategy/` | Business intelligence — positioning, growth, monetisation (planned) |
+| `prompts/` | Prompt templates with `{{VARIABLE}}` systems for Seedance and captions |
+| `workflows/` | Process definitions — the 10-stage video pipeline |
+| `agents/` | Agent operating instructions and behaviour rules |
+| `SYSTEM/` | Operational intelligence — rules, automations, campaign log, integration docs |
+
+## Root Files
+
+| File | Purpose |
+|------|---------|
+| `CLAUDE.md` | Claude Code operating instructions for this repo |
+| `CREATIVE-DIRECTION.md` | Master brand identity — stable, rarely changes |
+| `brand-voice.md` | Communication tone and writing rules |
+| `visual-language.md` | Visual composition and design rules |
+| `ARCHITECTURE.md` | This file |
+
+## Structure Principle
+
 One file = one responsibility.
-Avoid mixing unrelated systems inside the same file.
-Example:
-	•	visual rules should not live inside commerce files
-	•	cinematic direction should not live inside SEO files
-	•	brand voice should not live inside automation rules
-This keeps the intelligence system organised, scalable, and easier for Claude to retrieve accurately.
 
-PLANNED SUB-SECTIONS
-/brand
-Purpose:
-Core brand identity and visual consistency.
-Planned files:
-	•	brand-voice.md
-	•	visual-language.md
-	•	typography.md
-	•	colour-system.md
-	•	audience-psychology.md
+Do not mix unrelated systems across files. Brand voice does not belong in commerce files. Cinematic direction does not belong in SEO files. Keep each file modular, clearly named, and easy to retrieve from.
 
-/cinematics
-Purpose:
-Video direction, cinematic language, and motion aesthetics.
-Planned files:
-	•	camera-language.md
-	•	lighting-rules.md
-	•	motion-direction.md
-	•	editing-style.md
-	•	shot-composition.md
-
-/content
-Purpose:
-Content frameworks and audience engagement systems.
-Planned files:
-	•	tiktok-frameworks.md
-	•	instagram-frameworks.md
-	•	storytelling-hooks.md
-	•	caption-structures.md
-	•	emotional-triggers.md
-
-/commerce
-Purpose:
-E-commerce systems and conversion logic.
-Planned files:
-	•	product-launch-system.md
-	•	shopify-seo.md
-	•	email-marketing.md
-	•	conversion-psychology.md
-
-/strategy
-Purpose:
-Long-term business and growth intelligence.
-Planned files:
-	•	positioning.md
-	•	competitor-analysis.md
-	•	audience-growth.md
-	•	monetisation.md
-	•	expansion-roadmap.md
-
-/SYSTEM
-Purpose:
-Operational intelligence and automation logic.
-Planned structure:
-	•	workflows/
-	•	prompts/
-	•	agents/
-	•	automations/
-	•	operating-rules/
-This section controls:
-	•	workflow behaviour
-	•	automation systems
-	•	agent responsibilities
-	•	operational logic
-	•	prompt orchestration
-
-SYSTEM PHILOSOPHY
-The repository should evolve into:
-	•	a personal brand operating system
-	•	a creative intelligence infrastructure
-	•	a scalable automation environment
-The goal is not simply storing information.
-The goal is:
-	•	preserving context
-	•	improving creative consistency
-	•	compounding intelligence
-	•	automating repeated decisions
-	•	scaling brand execution
-Claude should treat the repository as:
-	•	persistent memory
-	•	structured intelligence
-	•	operational context
-	•	creative infrastructure
-The system should prioritise:
-	•	clarity
-	•	consistency
-	•	scalability
-	•	modular organisation
-	•	high-quality retrieval
-	•	long-term maintainability
+Core identity files (`CREATIVE-DIRECTION.md`, `brand-voice.md`, `visual-language.md`) remain stable at root level. Sub-systems evolve independently inside their folders.
