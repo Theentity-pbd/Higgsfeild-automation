@@ -39,7 +39,7 @@ The system follows **one file = one responsibility**. Do not mix concerns across
 | `prompts/caption-prompt.md` | Modular caption generation system with `{{VARIABLE}}` placeholders |
 | `workflows/video-pipeline.md` | 10-stage pipeline: Brief → Context Analysis → Variables → Prompt → Validate → Submit → Review → Select → Export → Log |
 
-**Planned but not yet created:** `/brand`, `/cinematics`, `/content`, `/commerce`, `/strategy` sub-directories per `ARCHITECTURE.md`.
+**Planned but not yet created:** `/commerce`, `/strategy` sub-directories per `ARCHITECTURE.md`.
 
 ---
 
@@ -79,6 +79,25 @@ Both prompt files use `{{VARIABLE_NAME}}` placeholders. When building prompts:
 8. **Asset Selection** — approve or reject
 9. **Export & Naming** — format: `YYYYMMDD-campaign-scene-version` (e.g. `20260522-pressure-season-rooftop-v01`)
 10. **Obsidian Logging** — log campaign name, date, prompt version, approved/failed outputs, asset paths
+
+---
+
+## Session Logging (Automatic)
+
+After every campaign output generated in this repo, append an entry to `SYSTEM/campaign-log.md` using this format:
+
+```
+## [CAMPAIGN NAME] — [YYYY-MM-DD]
+
+**Product:** [product]
+**Emotional Direction:** [direction]
+**Outputs Generated:** [list: Seedance prompt / Instagram caption / TikTok caption / headline]
+**Status:** [Draft / Approved / Rejected]
+**Notes:** [anything revised, rejected, or worth remembering for next time]
+---
+```
+
+Do this automatically — do not wait to be asked. The log is how the system remembers what has been built and what has worked.
 
 ---
 
